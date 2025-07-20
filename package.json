@@ -2,7 +2,7 @@
   "name": "shivam-art",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sutharnaresh868-ship-it.github.io/your-repo-name",
+  "homepage": "https://sutharnaresh868-ship-it.github.io/shivam-art-prod",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,6 +12,7 @@
     "deploy": "npm run build && npm run export && node deploy.js"
   },
   "dependencies": {
+    
     "@hookform/resolvers": "^3.9.0",
     "@next/swc-wasm-nodejs": "13.5.1",
     "@radix-ui/react-accordion": "^1.2.0",
