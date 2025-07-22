@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState } from "react";
+import Link from "next/link";
 import {
   Menu,
   X,
@@ -11,15 +11,16 @@ import {
   Facebook,
   Instagram,
   Twitter,
-} from 'lucide-react';
+} from "lucide-react";
+import { url } from "inspector";
 
 export default function Home() {
   const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    subject: '',
-    message: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const handleChange = (
@@ -33,7 +34,7 @@ export default function Home() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setMobileMenuOpen(false);
   };
@@ -49,11 +50,11 @@ export default function Home() {
 📝 Message: ${message}
     `.trim();
 
-    const phoneNumber = '9660104545';
+    const phoneNumber = "9660104545";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       text
     )}`;
-    window.open(whatsappURL, '_blank');
+    window.open(whatsappURL, "_blank");
   };
 
   return (
@@ -71,7 +72,7 @@ export default function Home() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              {['Home', 'About', 'Products', 'Gallery', 'Contact'].map(
+              {["Home", "About", "Products", "Gallery", "Contact"].map(
                 (item) => (
                   <button
                     key={item}
@@ -99,7 +100,7 @@ export default function Home() {
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t border-amber-200 bg-amber-50">
-              {['Home', 'About', 'Products', 'Gallery', 'Contact'].map(
+              {["Home", "About", "Products", "Gallery", "Contact"].map(
                 (item) => (
                   <button
                     key={item}
@@ -123,7 +124,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(assets/banner-1.png)',
+            backgroundImage: "url(/assets/banner-1.png)",
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
@@ -139,7 +140,7 @@ export default function Home() {
             pieces that tell stories and warm hearts
           </p>
           <button
-            onClick={() => scrollToSection('products')}
+            onClick={() => scrollToSection("products")}
             className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Explore Products
@@ -207,46 +208,46 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'Handcrafted Dining Table',
+                title: "Handcrafted Dining Table",
                 description:
-                  'Solid oak dining table with intricate carved details, seats 6-8 people comfortably.',
-                image: 'assets/no-image.jpg',
-                price: '$2,400',
+                  "Solid oak dining table with intricate carved details, seats 6-8 people comfortably.",
+                image: "assets/no-image.jpg",
+                price: "$2,400",
               },
               {
-                title: 'Rustic Bookshelf',
+                title: "Rustic Bookshelf",
                 description:
-                  'Five-tier reclaimed wood bookshelf with natural edge and traditional joinery.',
-                image: 'assets/no-image.jpg',
-                price: '$890',
+                  "Five-tier reclaimed wood bookshelf with natural edge and traditional joinery.",
+                image: "assets/no-image.jpg",
+                price: "$890",
               },
               {
-                title: 'Artisan Jewelry Box',
+                title: "Artisan Jewelry Box",
                 description:
-                  'Walnut jewelry box with velvet lining and hand-carved floral motifs.',
-                image: 'assets/no-image.jpg',
-                price: '$320',
+                  "Walnut jewelry box with velvet lining and hand-carved floral motifs.",
+                image: "assets/no-image.jpg",
+                price: "$320",
               },
               {
-                title: 'Custom Kitchen Cabinets',
+                title: "Custom Kitchen Cabinets",
                 description:
-                  'Made-to-order kitchen cabinets in cherry wood with traditional raised panels.',
-                image: 'assets/no-image.jpg',
-                price: 'From $4,200',
+                  "Made-to-order kitchen cabinets in cherry wood with traditional raised panels.",
+                image: "assets/no-image.jpg",
+                price: "From $4,200",
               },
               {
-                title: 'Wooden Serving Tray',
+                title: "Wooden Serving Tray",
                 description:
-                  'Maple serving tray with carved handles, perfect for entertaining guests.',
-                image: 'assets/no-image.jpg',
-                price: '$165',
+                  "Maple serving tray with carved handles, perfect for entertaining guests.",
+                image: "assets/no-image.jpg",
+                price: "$165",
               },
               {
-                title: 'Rocking Chair',
+                title: "Rocking Chair",
                 description:
-                  'Traditional Windsor-style rocking chair crafted from seasoned hardwood.',
-                image: 'assets/no-image.jpg',
-                price: '$1,250',
+                  "Traditional Windsor-style rocking chair crafted from seasoned hardwood.",
+                image: "assets/no-image.jpg",
+                price: "$1,250",
               },
             ].map((product, index) => (
               <div
@@ -316,12 +317,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              'assets/no-image.jpg',
-              'assets/no-image.jpg',
-              'assets/no-image.jpg',
-              'assets/no-image.jpg',
-              'assets/no-image.jpg',
-              'assets/no-image.jpg',
+              "assets/no-image.jpg",
+              "assets/no-image.jpg",
+              "assets/no-image.jpg",
+              "assets/no-image.jpg",
+              "assets/no-image.jpg",
+              "assets/no-image.jpg",
             ].map((image, index) => (
               <div
                 key={index}
@@ -546,7 +547,7 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <div className="space-y-2">
-                {['Home', 'About', 'Products', 'Gallery', 'Contact'].map(
+                {["Home", "About", "Products", "Gallery", "Contact"].map(
                   (item) => (
                     <button
                       key={item}
